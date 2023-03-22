@@ -18,10 +18,12 @@ public class WayPointSystemScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (self.transform.position.x>=goalPoint.position.x)
+        {
+            //movement = new Vector2(0, -1);
+
+        }
         self.transform.Translate(movement * Time.deltaTime);
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        movement = new Vector2(0, 0);
-    }
+
 }
