@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Tower2 : MonoBehaviour
 {
+    public float ProjectileSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +15,11 @@ public class Tower2 : MonoBehaviour
     void Update()
     {
         
+    }
+
+
+    public void shoot()
+    {
+
     }
 }
