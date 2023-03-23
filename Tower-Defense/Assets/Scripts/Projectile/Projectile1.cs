@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Projectile1 : MonoBehaviour
 {
+    public float projectileSpeed = 500;
+
     // Start is called before the first frame update
     void Start()
     {
