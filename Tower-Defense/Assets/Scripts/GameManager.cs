@@ -7,9 +7,11 @@ public class GameManager : MonoBehaviour
 {
     public int PlayerHealth;
     public TextMeshProUGUI HPText;
+    public static GameManager Instance;
     // Start is called before the first frame update
     void Start()
     {
+        Instance = this;
         UpdatePlayerHP();
     }
 
