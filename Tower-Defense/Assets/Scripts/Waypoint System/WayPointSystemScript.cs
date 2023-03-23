@@ -8,6 +8,7 @@ public class WayPointSystemScript : MonoBehaviour
     public Transform startPoint;
     public Transform goalPoint;
     public GameObject self;
+    public float Speed = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,7 @@ public class WayPointSystemScript : MonoBehaviour
             //movement = new Vector2(0, -1);
 
         }
-        self.transform.Translate(movement * Time.deltaTime);
+        self.transform.Translate(movement.normalized* Speed * Time.deltaTime);
     }
 
 }
