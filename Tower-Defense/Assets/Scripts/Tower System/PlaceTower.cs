@@ -21,6 +21,7 @@ public class PlaceTower : MonoBehaviour
 
     private void OnMouseDown()
     {
+        Instantiate(Prefab, transform.position, transform.rotation);
         Destroy(this.gameObject);
     }
 }
