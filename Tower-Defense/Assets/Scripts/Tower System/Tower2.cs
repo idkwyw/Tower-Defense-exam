@@ -6,27 +6,32 @@ public class Tower2 : MonoBehaviour
 {
     public float ProjectileSpeed;
     public float cooldown;
-    // private float tempCooldown;
     List<GameObject> Targets = new List<GameObject>();
     public GameObject Bullet;
+    public bool Attacking;
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine("shooting");
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Targets.Count > 0)
+        {
+        StartCoroutine(shooting());
 
+        }
     }
 
     IEnumerator shooting()
     {
-        while(Targets.Count>0) 
+     if(!Attacking) 
         {
+            Attacking = true;
             shoot();
             yield return new WaitForSeconds(cooldown);
+            Attacking = false;
         }
     }
 

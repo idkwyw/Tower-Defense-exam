@@ -24,7 +24,7 @@ public class Bullet2Script : MonoBehaviour
             }
             else
             {
-                // Destroy(collision.gameObject);
+                Destroy(collision.gameObject);
             }
         }
         else if (collision.gameObject.CompareTag("Enemy2"))
@@ -35,7 +35,7 @@ public class Bullet2Script : MonoBehaviour
             }
             else
             {
-                // Destroy(collision.gameObject);
+                Destroy(collision.gameObject);
             }
         }
         Destroy(this.gameObject);

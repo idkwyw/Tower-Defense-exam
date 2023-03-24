@@ -1281,7 +1281,7 @@ GameObject:
   - component: {fileID: 1424732089}
   m_Layer: 0
   m_Name: EnemyPlaceholder
-  m_TagString: Enemy1
+  m_TagString: Enemy2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1903,6 +1903,7 @@ MonoBehaviour:
   ProjectileSpeed: 10
   cooldown: 1
   Bullet: {fileID: 3819841657743805711, guid: eeadf19e6546ccc45a667a7c17a2f1a9, type: 3}
+  Attacking: 0
 --- !u!1 &2122786751
 GameObject:
   m_ObjectHideFlags: 0
