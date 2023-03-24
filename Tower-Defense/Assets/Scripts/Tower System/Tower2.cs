@@ -5,18 +5,29 @@ using UnityEngine;
 public class Tower2 : MonoBehaviour
 {
     public float ProjectileSpeed;
+    public float cooldown;
+    // private float tempCooldown;
     List<GameObject> Targets = new List<GameObject>();
     public GameObject Bullet;
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine("shooting");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    IEnumerator shooting()
+    {
+        while(Targets.Count>0) 
+        {
+            shoot();
+            yield return new WaitForSeconds(cooldown);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

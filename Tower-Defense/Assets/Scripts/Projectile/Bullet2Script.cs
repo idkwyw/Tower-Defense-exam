@@ -14,17 +14,17 @@ public class Bullet2Script : MonoBehaviour
         transform.Translate(Direction * Time.deltaTime * Speed);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy1"))
         {
-            if (collision.gameObject.GetComponent<Enemy1>().Health>=1)
+            if (collision.gameObject.GetComponent<Enemy1>().Health >= 1)
             {
                 collision.gameObject.GetComponent<Enemy1>().Health -= 50;
             }
             else
             {
-                Destroy(collision.gameObject);
+                // Destroy(collision.gameObject);
             }
         }
         else if (collision.gameObject.CompareTag("Enemy2"))
@@ -35,7 +35,7 @@ public class Bullet2Script : MonoBehaviour
             }
             else
             {
-                Destroy(collision.gameObject);
+                // Destroy(collision.gameObject);
             }
         }
         Destroy(this.gameObject);
