@@ -6,7 +6,7 @@ public class Tower2 : MonoBehaviour
 {
     public float ProjectileSpeed;
     public float cooldown;
-    List<GameObject> Targets = new List<GameObject>();
+    public List<GameObject> Targets = new List<GameObject>();
     public GameObject Bullet;
     public bool Attacking;
     // Start is called before the first frame update
@@ -55,10 +55,13 @@ public class Tower2 : MonoBehaviour
 
     public void shoot()
     {
-        Vector3 direction = Targets[0].transform.position - transform.position;
-        var bullet = Instantiate(Bullet,transform.position,transform.rotation);
-        bullet.GetComponent<Bullet2Script>().Direction = direction.normalized;
-        bullet.GetComponent<Bullet2Script>().Speed = ProjectileSpeed;
+        for (int i = 0; i < Targets.Count; i++)
+        {
+            Vector3 direction = Targets[i].transform.position - transform.position;
+            var bullet = Instantiate(Bullet, transform.position, transform.rotation);
+            bullet.GetComponent<Bullet2Script>().Direction = direction.normalized;
+            bullet.GetComponent<Bullet2Script>().Speed = ProjectileSpeed;
+        }
 
     }
 }
