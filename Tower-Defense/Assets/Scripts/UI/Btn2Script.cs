@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Btn2Script : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject[] placementOptions;
+    public void showPlacementLocations()
     {
-        
-    }
+        for (int i = 0; i < placementOptions.Length; i++)
+        {
+            placementOptions[i].SetActive(true);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        }
     }
 }
