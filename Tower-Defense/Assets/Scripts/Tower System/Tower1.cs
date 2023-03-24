@@ -50,8 +50,13 @@ public class Tower1 : MonoBehaviour
 
     public void shooting()
     {
-        Vector3 direction = Target[0].transform.position - transform.position;
-        var bullet = Instantiate(Bullet, transform.position, transform.rotation);
-        bullet.GetComponent<Projectile1>().
+        for (int i = 0; i < Target.Count; i++)
+        {
+            Vector3 direction = Target[i].transform.position - transform.position;
+            var bullet = Instantiate(Bullet, transform.position, transform.rotation);
+            bullet.GetComponent<Projectile1>().direction = direction.normalized;
+            bullet.GetComponent<Projectile1>().speed = BulletSpeed;
+        }
+
     }
 }
