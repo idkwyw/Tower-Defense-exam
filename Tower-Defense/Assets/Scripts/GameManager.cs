@@ -6,7 +6,10 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public int PlayerHealth;
+    public int PlayerMoney;
     public TextMeshProUGUI HPText;
+    public TextMeshProUGUI MoneyText;
+
     public static GameManager Instance;
     // Start is called before the first frame update
     void Start()
@@ -24,5 +27,10 @@ public class GameManager : MonoBehaviour
     {
         HPText.text = "HP: " + PlayerHealth.ToString() + "%";
 
+    }
+
+    public void UpdatePlayerMoney() 
+    {
+        MoneyText.text = "Money: " + PlayerMoney.ToString();
     }
 }

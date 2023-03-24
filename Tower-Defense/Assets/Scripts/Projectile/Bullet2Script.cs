@@ -6,7 +6,12 @@ public class Bullet2Script : MonoBehaviour
 {
     public Vector3 Direction;
     public float Speed;
+    public GameManager gameManager;
 
+    private void Start()
+    {
+        gameManager = GameManager.Instance;
+    }
 
     // Update is called once per frame
     void Update()
@@ -24,6 +29,8 @@ public class Bullet2Script : MonoBehaviour
             }
             else
             {
+                gameManager.PlayerMoney+=10;
+                gameManager.UpdatePlayerMoney();
                 Destroy(collision.gameObject);
             }
         }
@@ -35,6 +42,8 @@ public class Bullet2Script : MonoBehaviour
             }
             else
             {
+                gameManager.PlayerMoney+=20;
+                gameManager.UpdatePlayerMoney();
                 Destroy(collision.gameObject);
             }
         }
