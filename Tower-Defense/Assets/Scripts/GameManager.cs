@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
         UpdatePlayerHP();
+        UpdatePlayerMoney();
     }
 
     // Update is called once per frame
