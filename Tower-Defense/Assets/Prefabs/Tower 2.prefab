@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectileSpeed: 10
   cooldown: 1
+  Targets: []
   Bullet: {fileID: 3819841657743805711, guid: eeadf19e6546ccc45a667a7c17a2f1a9, type: 3}
   Attacking: 0
 --- !u!58 &1395504062999515721
@@ -65,7 +66,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 10
+  m_Radius: 5
 --- !u!1 &6561955261326323362
 GameObject:
   m_ObjectHideFlags: 0

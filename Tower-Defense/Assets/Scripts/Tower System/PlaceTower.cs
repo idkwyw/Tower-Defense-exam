@@ -6,7 +6,7 @@ public class PlaceTower : MonoBehaviour
 {
 
     public GameObject Prefab;
-
+    public Btn2Script Btn2Script;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,5 +23,6 @@ public class PlaceTower : MonoBehaviour
     {
         Instantiate(Prefab, transform.position, transform.rotation);
         Destroy(this.gameObject);
+        Btn2Script.hidePlacementLocations();
     }
 }
