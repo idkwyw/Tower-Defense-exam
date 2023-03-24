@@ -9,10 +9,8 @@ public class Tower2 : MonoBehaviour
     public List<GameObject> Targets = new List<GameObject>();
     public GameObject Bullet;
     public bool Attacking;
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
+
+
 
     // Update is called once per frame
     void Update()
