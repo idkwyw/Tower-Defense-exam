@@ -52,7 +52,7 @@ MonoBehaviour:
   startPoint: {fileID: 0}
   goalPoint: {fileID: 0}
   self: {fileID: 5855635890717578593}
-  Speed: 1
+  Speed: 2
 --- !u!212 &6150187910152734281
 SpriteRenderer:
   m_ObjectHideFlags: 0

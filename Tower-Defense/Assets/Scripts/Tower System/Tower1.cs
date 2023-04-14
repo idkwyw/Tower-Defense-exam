@@ -25,7 +25,7 @@ public class Tower1 : MonoBehaviour
         if (!attack)
         {
             attack = true;
-            shoot();
+            shooting();
             yield return new WaitForSeconds(coolDown);
             attack = false;
         }
