@@ -4,11 +4,29 @@ using UnityEngine;
 
 public class Btn1Script : MonoBehaviour
 {
-    public GameObject prefab;
+    public List<GameObject> placementOps;
+    public GameObject tower;
+    public int towerPrice;
+    public GameManager GameManager;
+    public bool isFirstTimeBuying = true;
 
-    public void spawn()
+    private void Start()
     {
-        Instantiate(prefab, new Vector3(0, 0, 0), transform.rotation);
+        GameManager = GameManager.Instance;
+    }
+    public void showPlacementOps()
+    {
+        GameManager = GameManager.Instance;
+
+        if (GameManager.PlayerMoney >= towerPrice || isFirstTimeBuying)
+        {
+            isFirstTimeBuying = false;
+            for (int i = 0; i < placementOps.Count; i++)
+            {
+                placementOps[i].SetActive(true);
+                placementOps[i].GetComponent<PlaceTower>().Prefab = tower;
+            }
+        }
     }
 
 
