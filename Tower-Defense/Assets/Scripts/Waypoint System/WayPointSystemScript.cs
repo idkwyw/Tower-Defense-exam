@@ -19,11 +19,7 @@ public class WayPointSystemScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (self.transform.position.x>=goalPoint.position.x)
-        {
-            //movement = new Vector2(0, -1);
 
-        }
         self.transform.Translate(movement.normalized* Speed * Time.deltaTime);
     }
 
