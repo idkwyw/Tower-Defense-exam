@@ -6,7 +6,7 @@ public class Tower1 : MonoBehaviour
 {
     public float BulletSpeed;
     public float coolDown;
-    List<GameObject> Target = new List<GameObject>();
+    public List<GameObject> Target = new List<GameObject>();
     public GameObject Bullet;
     public bool attack;
     
@@ -36,7 +36,7 @@ public class Tower1 : MonoBehaviour
         if (collision.CompareTag("Enemy1") || collision.CompareTag("Enemy2"))
         {
             Target.Add(collision.gameObject);
-            //shoot();
+           
         }
     }
 

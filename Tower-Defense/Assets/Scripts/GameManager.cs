@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public int PlayerMoney;
     public TextMeshProUGUI HPText;
     public TextMeshProUGUI MoneyText;
-
+    public GameObject loseText;
     public static GameManager Instance;
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (PlayerHealth<=0)
+        {
+            loseText.SetActive(true);
+        }
     }
     public void UpdatePlayerHP()
     {

@@ -38,7 +38,7 @@ public class Tower2 : MonoBehaviour
         if (collision.CompareTag("Enemy1") || collision.CompareTag("Enemy2"))
         {
             Targets.Add(collision.gameObject);
-            // shoot();
+            
         }
     }
 
