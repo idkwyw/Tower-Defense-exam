@@ -1781,6 +1781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef1f3e74f17c3004f97c4fc4942553e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   placementOps:
   - {fileID: 1870624720}
   - {fileID: 1862873733}
@@ -1790,6 +1791,12 @@ MonoBehaviour:
   tower: {fileID: 861339687820992700, guid: 240af2c8d909d8043b7c0b1c99ab6360, type: 3}
   towerPrice: 50
   GameManager: {fileID: 1103077692}
+=======
+  placementOps: []
+  tower: {fileID: 0}
+  towerPrice: 0
+  GameManager: {fileID: 0}
+>>>>>>> fe99a4efaf255cbe659a4337524f95450ba24b30
   isFirstTimeBuying: 1
 --- !u!4 &1103077691
 Transform:
@@ -1984,6 +1991,7 @@ GameObject:
   - component: {fileID: 1377367573}
   - component: {fileID: 1377367572}
   - component: {fileID: 1377367571}
+  - component: {fileID: 1377367575}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -2088,6 +2096,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1377367569}
   m_CullTransparentMesh: 1
+--- !u!114 &1377367575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377367569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef1f3e74f17c3004f97c4fc4942553e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placementOps: []
+  tower: {fileID: 0}
+  towerPrice: 0
+  GameManager: {fileID: 1103077692}
+  isFirstTimeBuying: 1
 --- !u!1 &1620121528
 GameObject:
   m_ObjectHideFlags: 0
